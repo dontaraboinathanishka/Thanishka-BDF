@@ -114,10 +114,19 @@ GET	/time	Returns current server timestamp in JSON format
 GET	/* (Invalid Path)	Returns custom 404 Error message in JSON format
 
 ## 6. Screenshots
-GET / - Home Route: http://localhost:3000/
-GET /about - About Route: http://localhost:3000/about
-GET /time - Time Route: http://localhost:3000/time
-GET /invalid-path - 404 Route: http://localhost:3000/invalid-path
+
+### GET / - Home Route
+![Home Route](screenshots/home.png)
+
+### GET /about - About Route
+![About Route](screenshots/about.png)
+
+### GET /time - Time Route
+![Time Route](screenshots/time.png)
+
+### GET /invalid-path - 404 Error Route
+![404 Error Route](screenshots/unknown.png)
+
 ## 7. Execution & Running Locally
 Clone the repository:
 
