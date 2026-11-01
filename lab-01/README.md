@@ -1,5 +1,7 @@
 # Lab 01: Introduction to Express.js & Route Creation
 
+Deployment URL:https://thanishka-lab-1.onrender.com
+
 ## Student Identity
 - **Student Name:** D. Thanishka
 - **Registration Number:** 252U1R5039
@@ -9,21 +11,22 @@
 ---
 
 ## 1. Objective
-To build, configure, and deploy a basic Node.js and Express.js web server handling custom HTTP GET routes, managing academic identity endpoints, returning structured JSON responses for valid and invalid paths, and publishing the live web application on Render.
+To set up a Node.js project and build a small web server using the built-in HTTP module, then create a web server using Express.js.
 
 ---
 
 ## 2. Project Description
-This project demonstrates the creation of a foundational web server using Node.js and Express.js for Lab 01 of the Backend Development Frameworks course. It features four distinct API endpoints that respond with text and JSON structures, custom 404 error handling for undefined routes, complete local screenshot documentation, and live deployment on Render.
+This project demonstrates how to create a basic web server using Node.js and its built-in HTTP module and how to create a web server using Express.js.
+
+The Express server provides three routes: /, /about, and /time. It also returns a 404 response for unknown routes.
 
 ---
 
 ## 3. Technologies Used
-- **Runtime Environment:** Node.js
-- **Web Framework:** Express.js
-- **Development Tools:** Nodemon
-- **Deployment Platform:** Render
-- **Version Control:** Git & GitHub
+Node.js
+Express.js
+JavaScript
+npm
 
 ---
 
@@ -43,10 +46,66 @@ Thanishka-BDF/
     ├── package-lock.json
     ├── README.md
     └── server.js
-5. API Endpoints
+```
+## Explanation of package.json
+The package.json file stores information about the Node.js project and its dependencies.
+
+name: Specifies the project name.
+version: Specifies the current project version.
+description: Provides a short description of the project, if present.
+main: Specifies the main entry file, if present.
+scripts: Defines commands that can be executed using npm.
+author: Specifies the project author, if present.
+license: Specifies the project's license, if present.
+dependencies: Lists packages required by the application, such as Express.js.
+devDependencies: Lists packages used during development, if present.
+Only fields present in the actual package.json file apply to this project.
+
+The package-lock.json file records the exact dependency versions used for installation. The node_modules folder contains the installed packages.
+## Installation
+## Prerequisites
+
+- **Node.js** installed on the computer.
+- **npm** (Node Package Manager), which is installed automatically with Node.js.
+
+---
+
+## Getting Started & Running Locally
+
+1. **Clone the Repository:**
+   ```bash
+   git clone [https://github.com/dontaraboinathanishka/Thanishka-BDF.git](https://github.com/dontaraboinathanishka/Thanishka-BDF.git)
+   cd Thanishka-BDF/lab-01
+Install Dependencies:
+
+Bash
+
+
+npm install
+
+Run the Server:
+
+Development Mode (with auto-restart via Nodemon):
+
+Bash
+
+
+npm run dev
+Standard Mode:
+
+Bash
+
+
+node server.js
+
+## 5. API Endpoints
 Local Base URL: http://localhost:3000
 
 Live Base URL: https://thanishka-lab-1.onrender.com
+
+The following endpoints are provided by the Express server.
+
+Method Endpoint Description Expected Status GET / Returns a welcome message. 200 OK GET /about Returns JSON containing student name (Thanishka), registration number (252U1R5039), and section (CSE (AI & DE)). 200 OK GET /time Returns the current date and time using new Date().toISOString(). 200 OK GET Any unknown path Returns a 404 Page Not Found JSON payload. 404 Not Found
 
 HTTP Method	Endpoint	Description
 GET	/	Returns welcome message
@@ -54,18 +113,18 @@ GET	/about	Returns student identity details in JSON format
 GET	/time	Returns current server timestamp in JSON format
 GET	/* (Invalid Path)	Returns custom 404 Error message in JSON format
 
-6. Screenshots
-GET / - Home Route
-GET /about - About Route
-GET /time - Time Route
-GET /invalid-path - 404 Error Route
-7. Execution & Running Locally
+## 6. Screenshots
+GET / - Home Route: http://localhost:3000/
+GET /about - About Route: http://localhost:3000/about
+GET /time - Time Route: http://localhost:3000/time
+GET /invalid-path - 404 Route: http://localhost:3000/invalid-path
+## 7. Execution & Running Locally
 Clone the repository:
 
 Bash
 
 
-git clone <THANISHKA_GITHUB_REPO_URL>
+git clone dontaraboinathanishka/Thanishka-BDF
 cd Thanishka-BDF/lab-01
 Install dependencies:
 
@@ -82,42 +141,50 @@ npm run dev
 Access endpoints in your browser:
 Navigate to http://localhost:3000/.
 
-8. Deployment
+## 8. Deployment
 The application is deployed live on Render:
 
 Deployment Platform: Render
+
+GitHub Repository: dontaraboinathanishka/Thanishka-BDF
 
 Live Base URL: https://thanishka-lab-1.onrender.com
 
 
 ---
+## Testing
+The endpoints should be tested by opening their URLs in a web browser.
 
-### Step 5: Add Screenshots & Create `.gitignore`
+The following checks should be performed:
 
-1. Create a `.gitignore` file inside `lab-01`:
-   ```text
-   node_modules/
-   .env
-Save your 4 route screenshots inside Thanishka-BDF/lab-01/screenshots/:
+Open / and check that the welcome message is displayed with status code 200.
 
-home.png
+Open /about and check that the student's name, registration number, and section are returned as JSON with status code 200.
 
-about.png
+Open /time and check that the current date and time are displayed with status code 200.
 
-time.png
+Open an unknown route, such as /unknown, and check that the server returns status code 404.
 
-unknown.png
+The screenshots in the screenshots/ folder provide evidence of the endpoint responses.
 
-Step 6: Git Push to Her Repository
-Make sure your terminal is inside C:\Users\bhagy\OneDrive\Desktop\Thanishka-BDF (or lab-01):
-# Initialize git if not already done in the root folder
-git init
-git branch -M main
+## Notes: Problems Faced and Solutions
+GitHub upload: I learned how to stage, commit, and push the project files to GitHub using Git commands.
 
-# Connect to her repository using her PAT to bypass 403 authorization issues
-git remote add origin https://<THANISHKA_PAT>@github.com/<THANISHKA_USERNAME>/<THANISHKA_REPO_NAME>.git
+Node modules: I added node_modules/ to .gitignore to prevent uploading installed dependencies to GitHub. Dependencies can be installed again using npm install.
 
-# Add, commit, and push
-git add .
-git commit -m "feat: setup lab-01 express server and README documentation for D. Thanishka"
-git push -u origin main
+Deployment: I configured the Node.js project for deployment on Render and obtained a public deployment URL.
+
+Testing: I used a web browser to check the server responses and verify the expected endpoints.
+
+## Important Notes
+Install dependencies using npm install.
+
+Do not upload the node_modules/ folder to GitHub.
+
+Do not commit or share any .env file containing secrets.
+
+The basic HTTP server and Express server both use port 3000, so run them one at a time.
+
+Ensure all screenshot files exist in the screenshots/ folder.
+
+Verify the endpoint responses and status codes before submission.
