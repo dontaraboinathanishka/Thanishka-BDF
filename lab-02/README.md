@@ -1,9 +1,9 @@
 ### Backend Development Lab 2 – SQLite Database and CRUD Operations
 Live Link
-Public Deployment URL: https://chaithu-bdf-lab2.onrender.com/books/
+Public Deployment URL: https://thanishka-lab-2.onrender.com
 ## Student Details
-Name: Ganta Chaitanya Vardhan
-Registration Number: 252U1R5047
+Name: D.THANISHKA
+Registration Number: 252U1R5039
 Section: CSE (AI & DE)
 Course: Backend Development Fundamentals
 Lab: Lab 2 – SQLite database and CRUD routes
@@ -43,16 +43,33 @@ npm run dev For normal execution:
 
 npm start The local server runs on port 3000.
 
-## 7. API Endpoints
+## 7.Screenshots
+
+### 1. GET /books/ (Retrieve All Books)
+![GET All Books](screenshots/get_all_books.png)
+
+### 2. GET /books/:bookId/ (Retrieve Single Book)
+![GET Single Book](screenshots/get_single_book.png)
+
+### 3. POST /books/ (Add New Book)
+![POST New Book](screenshots/post_book.png)
+
+### 4. PUT /books/:bookId/ (Update Book)
+![PUT Update Book](screenshots/put_book.png)
+
+### 5. DELETE /books/:bookId/ (Delete Book)
+![DELETE Book](screenshots/delete_book.png)
+
+## 8. API Endpoints
 Local Base URL:
 
 http://localhost:3000 Live Base URL:
 
-https://chaithu-bdf-lab2.onrender.com
+https://thanishka-lab-2.onrender.com
 
 HTTP Method Endpoint Description GET /books/ Retrieve all books GET /books/:bookId/ Retrieve a book by ID POST /books/ Add a new book PUT /books/:bookId/ Update an existing book DELETE /books/:bookId/ Delete a book
 
-## 8. API Request Examples
+## 9. API Request Examples
 8.1 GET - Retrieve All Books GET /books/ Retrieves all book records from the database.
 
 8.2 GET - Retrieve a Book by ID GET /books/1/ Retrieves a specific book using its ID.
@@ -67,7 +84,7 @@ HTTP Method Endpoint Description GET /books/ Retrieve all books GET /books/:book
 
 8.5 DELETE - Delete a Book DELETE /books/1/ Deletes a book using its ID.
 
-## 9. SQL Queries Used
+## 10. SQL Queries Used
 SELECT:
 
 SELECT * FROM book; INSERT:
@@ -78,17 +95,17 @@ UPDATE book SET title = ?, author = ?, price = ?, pages = ? WHERE id = ?; DELETE
 
 DELETE FROM book WHERE id = ?; Parameterized queries are used to safely pass values into SQL statements.
 
-## 10. Testing
+## 11. Testing
 The API endpoints were tested using Postman.
 
 GET - Retrieved all book records. GET by ID - Retrieved individual book details. POST - Added a new book successfully. PUT - Updated existing book details. DELETE - Deleted a book successfully. The database records were also verified using SQLite CLI. The database records were also verified using SQLite CLI.
 
-## 11. Deployment
+## 12. Deployment
 The Express.js application was deployed using Render.
 
 Live API:
 
-https://chaithu-bdf-lab2.onrender.com/books/
+https://thanishka-lab-2.onrender.com
 
-## 12. Problems Faced and Solutions
+## 13. Problems Faced and Solutions
 SQLite installation: Installed SQLite tools and configured the environment. Database connection: Connected SQLite with Express using the sqlite and sqlite3 packages. GitHub push rejection: Resolved unrelated Git histories and successfully pushed the project. Render compatibility: Addressed Node.js and SQLite package compatibility issues. API testing: Tested CRUD operations locally before deploying the updated application.
