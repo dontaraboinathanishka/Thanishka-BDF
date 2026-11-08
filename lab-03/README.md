@@ -343,7 +343,7 @@ Expected: **400 Bad Request**.
 
 ### 5. Price Filtering
 
-![Price Filtering](screenshots/price-fltering.png)
+![Price Filtering](screenshots/price-flitering.png)
 
 ### 6. POST Validation Error
 
