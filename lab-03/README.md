@@ -2,8 +2,8 @@
 
 ## Project Details
 
-- **Name:** Ganta Chaitanya Vardhan
-- **Registration Number:** 252U1R5047
+- **Name:** D. Thanishka
+- **Registration Number:** 252U1R5039
 - **Section:** CSE (AI & DE)
 - **Course:** Backend Development Fundamentals
 - **Lab:** Lab 3 – REST API, Query Parameters, Validation and Debugging
@@ -11,7 +11,7 @@
 
 ## Deployment URL
 
-**Render URL:** https://chaithu-lab-3.onrender.com/books
+**Render URL:** https://thanishka-lab-3.onrender.com/books
 
 ## Project Description
 
@@ -51,10 +51,10 @@ lab-03/
     ├── not-found-error.png
     ├── post-success.png
     ├── post-validation-error.png
-    ├── price-filter.png
+    ├── price-fltering.png
+    ├── put-update.png
     ├── sorting-ascending.png
-    ├── sorting-descending.png
-    └── update.png
+    └── sorting-descending.png
 ```
 
 ## Installation and Setup
@@ -62,7 +62,7 @@ lab-03/
 ### 1. Clone the repository
 
 ```bash
-git clone [https://github.com/chaithu-m10-eng/chaithu-BDF-LABS.git](https://github.com/chaithu-m10-eng/chaithu-BDF-LABS.git)
+git clone [https://github.com/dontaraboinathanishka/Thanishka-BDF.git](https://github.com/dontaraboinathanishka/Thanishka-BDF.git)
 ```
 
 ### 2. Open the project folder
@@ -343,7 +343,7 @@ Expected: **400 Bad Request**.
 
 ### 5. Price Filtering
 
-![Price Filtering](screenshots/price-filter.png)
+![Price Filtering](screenshots/price-fltering.png)
 
 ### 6. POST Validation Error
 
@@ -355,7 +355,7 @@ Expected: **400 Bad Request**.
 
 ### 8. PUT Update Request
 
-![PUT Update Request](screenshots/update.png)
+![PUT Update Request](screenshots/put-update.png)
 
 ### 9. DELETE Request
 
